@@ -1,0 +1,10 @@
+{
+  "extends": "@mozaic/tsconfig/nextjs.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+}
