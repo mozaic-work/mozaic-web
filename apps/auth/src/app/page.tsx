@@ -64,7 +64,7 @@ export default function Home() {
             className="justify-end underline text-sm text-scarlet-500 font-normal p-0 mt-1"
             asChild
           >
-            <Link href="/">Forget my password</Link>
+            <Link href="/forgot-password">Forget my password</Link>
           </Button>
         </div>
 
