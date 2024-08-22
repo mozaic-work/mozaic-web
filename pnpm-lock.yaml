@@ -57,6 +57,9 @@ importers:
       '@mozaic/tsconfig':
         specifier: workspace:*
         version: link:../../config/typescript-config
+      '@mozaic/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       '@types/node':
         specifier: ^20
         version: 20.16.1
@@ -110,9 +113,21 @@ importers:
 
   packages/ui:
     dependencies:
+      '@radix-ui/react-slot':
+        specifier: ^1.1.0
+        version: 1.1.0(@types/react@18.3.4)(react@18.3.1)
+      class-variance-authority:
+        specifier: ^0.7.0
+        version: 0.7.0
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       react:
         specifier: ^18
         version: 18.3.1
+      tailwind-merge:
+        specifier: ^2.5.2
+        version: 2.5.2
     devDependencies:
       '@mozaic/eslint-config':
         specifier: workspace:*
@@ -132,6 +147,12 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.3.0
+      postcss:
+        specifier: ^8
+        version: 8.4.31
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.10(ts-node@10.9.2(@types/node@20.16.1)(typescript@5.5.4))
       typescript:
         specifier: ^5.5.4
         version: 5.5.4

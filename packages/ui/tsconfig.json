@@ -1,13 +1,10 @@
 {
   "extends": "@mozaic/tsconfig/base.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "jsx": "react",
   },
   "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
+    "src/**/*"
   ]
 }

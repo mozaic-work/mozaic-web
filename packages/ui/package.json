@@ -2,13 +2,14 @@
   "name": "@mozaic/ui",
   "version": "1.0.0",
   "private": true,
-  "exports": {},
-  "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component"
-  },
+  "main": "src/index.ts",
+  "types": "src/index.ts",
   "dependencies": {
-    "react": "^18"
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "react": "^18",
+    "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
     "@mozaic/eslint-config": "workspace:*",
@@ -17,6 +18,8 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.5.4"
   },
   "eslintConfig": {
