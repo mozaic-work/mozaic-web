@@ -1,0 +1,27 @@
+{
+  "name": "@mozaic/ui",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {},
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "generate:component": "turbo gen react-component"
+  },
+  "dependencies": {
+    "react": "^18"
+  },
+  "devDependencies": {
+    "@mozaic/eslint-config": "workspace:*",
+    "@mozaic/tsconfig": "workspace:*",
+    "@turbo/gen": "^2.0.14",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5.5.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@mozaic/eslint-config/library"
+    ]
+  }
+}
