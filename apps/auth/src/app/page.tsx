@@ -18,18 +18,18 @@ export default function Home() {
         alt=""
         layout="fill"
         objectFit="contain"
-        className="!top-[-150px]"
+        className="hidden sm:block !top-[-150px]"
       />
 
-      <div className="max-w-md my-20 mx-auto bg-white border border-[#E7E7E7] relative z-5 rounded-3xl">
-        <div className="w-full flex flex-col px-8 py-12">
+      <div className="max-w-md my-0 sm:my-20 mx-auto bg-white sm:border sm:border-porcelain-100 sm:shadow-sm relative z-5 rounded-3xl">
+        <div className="w-full flex flex-col px-6 sm:px-8 py-12">
           <div>
             <Image src={logoSvg} alt="Mozaic" width={64} height={64} />
             <div className="mt-4">
-              <h1 className="text-xl text-[#22292F] font-medium">
+              <h1 className="text-xl text-porcelain-950 font-bold">
                 Welcome to Mozaic!
               </h1>
-              <p className="text-sm text-[#859BAB] mt-1">
+              <p className="text-sm text-porcelain-400 mt-1">
                 Sign in to your account to continue
               </p>
             </div>
@@ -72,24 +72,24 @@ export default function Home() {
 
               <Button
                 variant="link"
-                className="justify-end underline text-sm text-[#FF470A] p-0 mt-1"
+                className="justify-end underline text-sm text-scarlet-500 font-normal p-0 mt-1"
                 asChild
               >
                 <Link href="/">Forget my password</Link>
               </Button>
             </div>
 
-            <Button size="lg">Sign in</Button>
+            <Button>Sign in</Button>
           </form>
 
-          <span className="my-6 text-[#859BAB] text-xs text-center">
+          <span className="my-6 text-porcelain-400 text-xs text-center">
             By joining you agree to the Terms of Service and Privacy Policy
           </span>
 
           <Separator />
 
           <div className="inline-flex items-center mx-auto mt-6">
-            <span className="text-sm text-[#859BAB] leading-relaxed">
+            <span className="text-xs text-porcelain-400 leading-relaxed">
               Having trouble to sign in?
             </span>
             <Button variant="outline" size="sm" className="ml-4">
