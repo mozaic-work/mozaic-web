@@ -81,8 +81,9 @@ export default function Home() {
         <span className="text-xs text-porcelain-400 leading-relaxed">
           Having trouble to sign in?
         </span>
-        <Button variant="outline" size="sm" className="ml-4">
-          Report
+
+        <Button variant="outline" size="sm" className="ml-4" asChild>
+          <Link href="/trouble">Report</Link>
         </Button>
       </div>
     </>
