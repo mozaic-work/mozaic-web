@@ -1,10 +1,8 @@
+import { Button, Label, RadioGroup, RadioGroupItem } from '@mozaic/ui'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import logoSvg from '@/assets/logo-bgOrange-iconWhite.svg'
-import { Button } from '@/components/ui/button'
-import { Label } from '@/components/ui/label'
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 
 export default function ForgotPassword() {
   return (

@@ -1,14 +1,10 @@
-import { Button } from '@mozaic/ui'
+import { Button, Input, Label, Separator } from '@mozaic/ui'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import googleLogo from '@/assets/google-logo.svg'
 import logoSvg from '@/assets/logo-bgOrange-iconWhite.svg'
 import microsoftLogo from '@/assets/microsoft-logo.svg'
-// import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Separator } from '@/components/ui/separator'
 
 export default function Home() {
   return (

@@ -1,11 +1,8 @@
+import { Button, Input, Label, Separator } from '@mozaic/ui'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import logoSvg from '@/assets/logo-bgOrange-iconWhite.svg'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Separator } from '@/components/ui/separator'
 
 export default function ForgotPassword() {
   return (
