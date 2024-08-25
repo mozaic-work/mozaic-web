@@ -18,7 +18,7 @@
     "@mozaic/eslint-config": "workspace:*",
     "@mozaic/tsconfig": "workspace:*",
     "@turbo/gen": "^2.0.14",
-    "@types/node": "^20",
+    "@types/node": "^20.16.1",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "postcss": "^8",
