@@ -1,5 +1,8 @@
 'use server'
 
+import { setCookie } from 'cookies-next'
+import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 import { z } from 'zod'
 
 import { signInWithEmailUseCase } from '@/infra/use-cases/sign-in-with-email'
@@ -24,16 +27,11 @@ export async function signInWithEmailAction(data: FormData) {
   const { email } = result.data
 
   try {
-    const { authenticateWithEmail: success } = await signInWithEmailUseCase({
+    await signInWithEmailUseCase({
       email,
     })
 
-    console.log('result', success)
-    return {
-      success,
-      message: null,
-      errors: null,
-    }
+    setCookie('auth_info', JSON.stringify(email), { cookies, path: '/' })
   } catch (err) {
     // TODO: change this log
     console.error('Failed to authenticate user', err)
@@ -43,4 +41,6 @@ export async function signInWithEmailAction(data: FormData) {
       errors: null,
     }
   }
+
+  redirect('/verify')
 }

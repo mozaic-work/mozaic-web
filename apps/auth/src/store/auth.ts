@@ -1,3 +1,4 @@
+import { getCookie, setCookie } from 'cookies-next'
 import { create } from 'zustand'
 import { devtools } from 'zustand/middleware'
 
@@ -6,22 +7,19 @@ export enum AUTH_STEP {
   PENDING_CODE = 'PENDING_CODE',
 }
 
-type Information = {
-  phone: string
-  email: string
-  target: string
-}
-
 type State = {
   step: AUTH_STEP
+  information: string | null
 }
 
 const initialState: State = {
   step: AUTH_STEP.AUTHENTICATE_WITH_EMAIL,
+  information: (getCookie('auth_info') as string) || null,
 }
 
 type Action = {
   setStep: (step: AUTH_STEP) => void
+  setInfo: (info: string) => void
 }
 
 export const useAuthStore = create<State & Action>()(
@@ -30,6 +28,11 @@ export const useAuthStore = create<State & Action>()(
 
     setStep: (step: AUTH_STEP) => {
       set({ step }, false, 'setStep')
+    },
+    setInfo: (info: string) => {
+      setCookie('auth_info', JSON.stringify(info))
+      console.log('hello')
+      set({ information: info }, false, 'setInfo')
     },
   })),
 )

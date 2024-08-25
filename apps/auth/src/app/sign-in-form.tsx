@@ -11,8 +11,11 @@ import { signInWithEmailAction } from './actions'
 export function SignInForm() {
   const { step, setStep } = useAuthStore()
 
-  const [, handleSubmit, isPending] = useFormState(signInWithEmailAction, () =>
-    setStep(AUTH_STEP.PENDING_CODE),
+  const [, handleSubmit, isPending] = useFormState(
+    signInWithEmailAction,
+    () => {
+      setStep(AUTH_STEP.PENDING_CODE)
+    },
   )
 
   if (step === AUTH_STEP.PENDING_CODE) return <h2>enter your code :D</h2>
