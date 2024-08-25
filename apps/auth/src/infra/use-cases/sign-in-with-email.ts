@@ -26,5 +26,5 @@ export async function signInWithEmailUseCase({
     },
   })
 
-  return data.authenticateWithEmail
+  return data
 }

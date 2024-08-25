@@ -1,10 +1,12 @@
-import { Button, Input, Label, Separator } from '@mozaic/ui'
+import { Button, Separator } from '@mozaic/ui'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import googleLogo from '@/assets/google-logo.svg'
 import logoSvg from '@/assets/logo-bgOrange-iconWhite.svg'
 import microsoftLogo from '@/assets/microsoft-logo.svg'
+
+import { SignInForm } from './sign-in-form'
 
 export default function Home() {
   return (
@@ -36,37 +38,7 @@ export default function Home() {
         </Button>
       </div>
 
-      <form className="w-full flex mt-6 flex-col gap-6">
-        <div className="flex flex-col gap-2">
-          <Label htmlFor="email">E-mail</Label>
-          <Input
-            id="email"
-            type="email"
-            placeholder="e.g. johndoe@example.com"
-          />
-        </div>
-
-        <div className="flex flex-col">
-          <Label htmlFor="password" className="mb-2">
-            Password
-          </Label>
-          <Input
-            id="password"
-            type="password"
-            placeholder="your super secret"
-          />
-
-          <Button
-            variant="link"
-            className="justify-end underline text-sm text-scarlet-500 font-normal p-0 mt-1"
-            asChild
-          >
-            <Link href="/forgot-password">Forget my password</Link>
-          </Button>
-        </div>
-
-        <Button>Sign in</Button>
-      </form>
+      <SignInForm />
 
       <span className="my-6 text-porcelain-400 text-xs text-center">
         By joining you agree to the Terms of Service and Privacy Policy
