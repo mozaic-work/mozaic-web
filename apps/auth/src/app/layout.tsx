@@ -26,10 +26,9 @@ export default function RootLayout({
         <div className="w-full min-h-screen overflow-x-hidden bg-white relative">
           <Image
             src={gridBackground}
-            alt=""
-            layout="fill"
-            objectFit="cover"
-            className="hidden sm:block !top-[-150px]"
+            alt="Illustrative grid background with small squares"
+            fill
+            className="hidden sm:block !top-[-150px] select-none pointer-events-none object-cover"
           />
 
           <div className="max-w-md my-0 sm:my-20 mx-auto bg-white sm:border sm:border-porcelain-100 sm:shadow-sm relative z-5 rounded-3xl">

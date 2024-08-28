@@ -1,5 +1,6 @@
 'use server'
 
+import { ApolloError } from '@apollo/client'
 import { setCookie } from 'cookies-next'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
@@ -31,8 +32,23 @@ export async function signInWithEmailAction(data: FormData) {
       email,
     })
 
-    setCookie('auth_info', JSON.stringify(email), { cookies, path: '/' })
+    const now = new Date()
+    const expiresIn = now.setMinutes(now.getMinutes() + 30) // expires in 30 minutes
+
+    setCookie('auth_info', JSON.stringify(email), {
+      cookies,
+      path: '/',
+      expires: new Date(expiresIn),
+    })
   } catch (err) {
+    if (err instanceof ApolloError) {
+      return {
+        success: false,
+        message: err.message,
+        errors: null,
+      }
+    }
+
     // TODO: change this log
     console.error('Failed to authenticate user', err)
     return {

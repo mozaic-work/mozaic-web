@@ -2,10 +2,10 @@ import { Button, Separator } from '@mozaic/ui'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import googleLogo from '@/assets/google-logo.svg'
+// import googleLogo from '@/assets/google-logo.svg'
 import logoSvg from '@/assets/logo-bgOrange-iconWhite.svg'
-import microsoftLogo from '@/assets/microsoft-logo.svg'
 
+// import microsoftLogo from '@/assets/microsoft-logo.svg'
 import { SignInForm } from './sign-in-form'
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div
+      {/* <div
         className="w-full flex mt-6 gap-2.5 items-center"
         aria-label="Social login"
       >
@@ -36,7 +36,7 @@ export default function Home() {
           <Image src={microsoftLogo} alt="Google" width={24} height={24} />
           <span className="sr-only">Sign in with Microsoft</span>
         </Button>
-      </div>
+      </div> */}
 
       <SignInForm />
 

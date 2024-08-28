@@ -31,7 +31,6 @@ export const useAuthStore = create<State & Action>()(
     },
     setInfo: (info: string) => {
       setCookie('auth_info', JSON.stringify(info))
-      console.log('hello')
       set({ information: info }, false, 'setInfo')
     },
   })),

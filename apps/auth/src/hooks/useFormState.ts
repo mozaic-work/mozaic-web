@@ -22,14 +22,11 @@ export function useFormState(
   )
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    console.log('func', event)
     event.preventDefault()
 
     const form = event.currentTarget
 
     const data = new FormData(form)
-
-    console.log('data', data)
 
     startTransition(async () => {
       const result = await action(data)
