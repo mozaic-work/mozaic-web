@@ -155,7 +155,6 @@ export function Header() {
             </svg>
           </button>
         </div>
-        <div className="absolute inset-0 my-1.5 rounded-full bg-secondary"></div>
       </div>
     </header>
   )

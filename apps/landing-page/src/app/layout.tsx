@@ -1,14 +1,13 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
-// eslint-disable-next-line camelcase
-import { Plus_Jakarta_Sans } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import type { ReactNode } from 'react'
 
 import { Header } from '@/components/header'
 import { cn } from '@/lib/utils'
 
-const font = Plus_Jakarta_Sans({ subsets: ['latin'] })
+const font = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Log in | Mozaic',
