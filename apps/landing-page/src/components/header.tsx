@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export function Header() {
   return (
     <header className="fixed top-0 z-50 w-full px-8 py-4">
@@ -15,30 +17,28 @@ export function Header() {
               dir="ltr"
             >
               <li>
-                <a
+                <Link
                   title="brand-logo"
                   href="/"
                   className="hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground data-[active]:bg-primary/10 data-[state=open]:bg-primary/10 group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                  data-radix-collection-item=""
                 >
                   <svg
-                    width="42"
-                    height="32"
-                    viewBox="0 0 42 32"
+                    width="32"
+                    height="23"
+                    viewBox="0 0 32 23"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-[20px] w-auto"
                   >
                     <path
-                      d="M14.9712 2.62554V13.5498C14.972 14.0425 15.1187 14.524 15.3928 14.9334L27.1533 30.1111C27.4183 30.5096 27.7783 30.8359 28.2009 31.0605C28.6235 31.285 29.0953 31.4009 29.5739 31.3976H39.7059C39.9686 31.3979 40.2288 31.3464 40.4716 31.2461C40.7144 31.1457 40.935 30.9985 41.1208 30.8129C41.3067 30.6272 41.4541 30.4067 41.5547 30.1641C41.6553 29.9214 41.7071 29.6613 41.7071 29.3986V18.6788C41.7082 18.0464 41.5208 17.428 41.1687 16.9027L29.3891 1.68842C29.1679 1.35408 28.8672 1.07987 28.514 0.890367C28.1607 0.700864 27.766 0.601995 27.3651 0.602627H16.9904C16.7243 0.600134 16.4604 0.650795 16.2141 0.75164C15.9679 0.852485 15.7442 1.00148 15.5563 1.1899C15.3684 1.37831 15.22 1.60235 15.1198 1.84887C15.0196 2.0954 14.9696 2.35945 14.9728 2.62554H14.9712Z"
-                      fill="currentColor"
-                    ></path>
+                      d="M10.8116 0.458924C11.1568 -0.195093 12.1116 -0.137875 12.3762 0.552682L15.9907 9.98551C16.066 10.1821 16.0666 10.3994 15.9925 10.5964L11.907 21.4579C11.7808 21.7934 11.46 22.0155 11.1016 22.0155H0.861721C0.213719 22.0155 -0.201793 21.3264 0.100668 20.7533L10.8116 0.458924Z"
+                      fill="black"
+                    />
                     <path
-                      d="M13.2699 16.9121H1.80139C1.60334 16.9119 1.40718 16.9507 1.22414 17.0264C1.04111 17.1021 0.874784 17.2131 0.734687 17.3531C0.594589 17.4931 0.483465 17.6593 0.407671 17.8423C0.331878 18.0253 0.292901 18.2214 0.292971 18.4195V29.8879C0.292622 30.086 0.331305 30.2821 0.406807 30.4652C0.48231 30.6482 0.593152 30.8146 0.732997 30.9548C0.872841 31.095 1.03895 31.2062 1.22181 31.2822C1.40468 31.3581 1.60073 31.3973 1.79874 31.3974H13.2699C13.6695 31.3974 14.0528 31.2387 14.3354 30.9561C14.6179 30.6735 14.7767 30.2902 14.7767 29.8906V18.4221C14.7771 18.224 14.7383 18.0277 14.6628 17.8446C14.5872 17.6614 14.4763 17.495 14.3363 17.3547C14.1964 17.2145 14.0302 17.1032 13.8472 17.0273C13.6642 16.9513 13.468 16.9122 13.2699 16.9121Z"
-                      fill="currentColor"
-                    ></path>
+                      d="M21.1884 0.458924C20.8432 -0.195093 19.8884 -0.137875 19.6238 0.552682L16.0093 9.98551C15.934 10.1821 15.9334 10.3994 16.0075 10.5964L20.093 21.4579C20.2192 21.7934 20.54 22.0155 20.8984 22.0155H31.1383C31.7863 22.0155 32.2018 21.3264 31.8993 20.7533L21.1884 0.458924Z"
+                      fill="black"
+                    />
                   </svg>
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -69,24 +69,6 @@ export function Header() {
               </li>
               <li>
                 <a
-                  href="/landing#integrations"
-                  className="hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground data-[active]:bg-primary/10 data-[state=open]:bg-primary/10 group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                  data-radix-collection-item=""
-                >
-                  Integrations
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/blog"
-                  className="hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground data-[active]:bg-primary/10 data-[state=open]:bg-primary/10 group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                  data-radix-collection-item=""
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
                   href="https://www.aomni.com/pricing"
                   className="hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground data-[active]:bg-primary/10 data-[state=open]:bg-primary/10 group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                   data-radix-collection-item=""
@@ -98,10 +80,18 @@ export function Header() {
           </div>
           <div className="absolute left-0 top-full flex justify-center"></div>
         </nav>
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center gap-1">
           <a
             aria-label="Visit Home"
-            className="ring-offset-background focus-visible:ring-ring inline-flex items-center justify-center whitespace-nowrap text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 font-semibold drop-shadow-[0_4px_2px_-3px_hsla(0,0%,0%,0.25)] relative overflow-hidden transition-colors duration-300 ml-3 rounded-full shadow-none bg-black text-white hover:bg-black/80"
+            className="focus-visible:ring-ring inline-flex items-center justify-center whitespace-nowrap text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 font-semibold drop-shadow-[0_4px_2px_-3px_hsla(0,0%,0%,0.25)] ml-4 relative overflow-hidden transition-colors duration-300 rounded-full shadow-none text-"
+            href="https://www.aomni.com/app?register=true"
+          >
+            <span className="relative z-10">Log in</span>
+          </a>
+
+          <a
+            aria-label="Visit Home"
+            className="ring-offset-background focus-visible:ring-ring inline-flex items-center justify-center whitespace-nowrap text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 font-semibold drop-shadow-[0_4px_2px_-3px_hsla(0,0%,0%,0.25)] relative overflow-hidden transition-colors duration-300 rounded-full shadow-none bg-black text-white hover:bg-black/80"
             href="https://www.aomni.com/app?register=true"
           >
             <span className="relative z-10">Get Started</span>
@@ -109,30 +99,30 @@ export function Header() {
           </a>
         </div>
         <div className="flex w-full flex-1 flex-row items-center justify-between px-4 lg:hidden">
-          <a
+          <Link
             href="/"
             title="brand-logo"
             className="relative mr-6 flex items-center space-x-2"
           >
             <svg
-              width="42"
-              height="32"
-              viewBox="0 0 42 32"
+              width="32"
+              height="23"
+              viewBox="0 0 32 23"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="size-6"
             >
               <path
-                d="M14.9712 2.62554V13.5498C14.972 14.0425 15.1187 14.524 15.3928 14.9334L27.1533 30.1111C27.4183 30.5096 27.7783 30.8359 28.2009 31.0605C28.6235 31.285 29.0953 31.4009 29.5739 31.3976H39.7059C39.9686 31.3979 40.2288 31.3464 40.4716 31.2461C40.7144 31.1457 40.935 30.9985 41.1208 30.8129C41.3067 30.6272 41.4541 30.4067 41.5547 30.1641C41.6553 29.9214 41.7071 29.6613 41.7071 29.3986V18.6788C41.7082 18.0464 41.5208 17.428 41.1687 16.9027L29.3891 1.68842C29.1679 1.35408 28.8672 1.07987 28.514 0.890367C28.1607 0.700864 27.766 0.601995 27.3651 0.602627H16.9904C16.7243 0.600134 16.4604 0.650795 16.2141 0.75164C15.9679 0.852485 15.7442 1.00148 15.5563 1.1899C15.3684 1.37831 15.22 1.60235 15.1198 1.84887C15.0196 2.0954 14.9696 2.35945 14.9728 2.62554H14.9712Z"
-                fill="currentColor"
-              ></path>
+                d="M10.8116 0.458924C11.1568 -0.195093 12.1116 -0.137875 12.3762 0.552682L15.9907 9.98551C16.066 10.1821 16.0666 10.3994 15.9925 10.5964L11.907 21.4579C11.7808 21.7934 11.46 22.0155 11.1016 22.0155H0.861721C0.213719 22.0155 -0.201793 21.3264 0.100668 20.7533L10.8116 0.458924Z"
+                fill="black"
+              />
               <path
-                d="M13.2699 16.9121H1.80139C1.60334 16.9119 1.40718 16.9507 1.22414 17.0264C1.04111 17.1021 0.874784 17.2131 0.734687 17.3531C0.594589 17.4931 0.483465 17.6593 0.407671 17.8423C0.331878 18.0253 0.292901 18.2214 0.292971 18.4195V29.8879C0.292622 30.086 0.331305 30.2821 0.406807 30.4652C0.48231 30.6482 0.593152 30.8146 0.732997 30.9548C0.872841 31.095 1.03895 31.2062 1.22181 31.2822C1.40468 31.3581 1.60073 31.3973 1.79874 31.3974H13.2699C13.6695 31.3974 14.0528 31.2387 14.3354 30.9561C14.6179 30.6735 14.7767 30.2902 14.7767 29.8906V18.4221C14.7771 18.224 14.7383 18.0277 14.6628 17.8446C14.5872 17.6614 14.4763 17.495 14.3363 17.3547C14.1964 17.2145 14.0302 17.1032 13.8472 17.0273C13.6642 16.9513 13.468 16.9122 13.2699 16.9121Z"
-                fill="currentColor"
-              ></path>
+                d="M21.1884 0.458924C20.8432 -0.195093 19.8884 -0.137875 19.6238 0.552682L16.0093 9.98551C15.934 10.1821 15.9334 10.3994 16.0075 10.5964L20.093 21.4579C20.2192 21.7934 20.54 22.0155 20.8984 22.0155H31.1383C31.7863 22.0155 32.2018 21.3264 31.8993 20.7533L21.1884 0.458924Z"
+                fill="black"
+              />
             </svg>
-            <span className="text-xl font-bold">aomni</span>
-          </a>
+
+            <span className="text-xl font-bold">mozaic</span>
+          </Link>
           <button
             type="button"
             aria-haspopup="dialog"

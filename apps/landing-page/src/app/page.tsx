@@ -19,7 +19,7 @@ export default function Home() {
               AI-Driven HR for
               <br className="hidden md:block" /> Teams Ready to Evolve
             </h1>
-            <p className="mb-12 text-center text-lg tracking-tight text-gray-400 md:text-xl text-balance translate-y-[-1rem]">
+            <p className="mb-12 text-center text-lg tracking-tight text-gray-500 md:text-xl text-balance translate-y-[-1rem]">
               Automate tasks, boost productivity, and empower decision-making
               with real-time, AI-generated insights—designed for
               forward-thinking teams ready to evolve.
