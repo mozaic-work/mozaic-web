@@ -1,12 +1,9 @@
 import './globals.css'
 
-import { GridPattern } from '@mozaic/ui'
 import type { Metadata } from 'next'
 // eslint-disable-next-line camelcase
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import type { ReactNode } from 'react'
-
-import { cn } from '@/lib/utils'
 
 const font = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
@@ -23,24 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <div className="w-full min-h-screen overflow-x-hidden bg-white relative">
-          <div className="max-w-md z-[2] my-0 sm:my-20 mx-auto bg-white sm:border sm:border-porcelain-100 sm:shadow-sm relative z-5 rounded-3xl">
-            <div className="w-full flex flex-col px-6 sm:px-8 py-12">
-              {children}
-            </div>
-          </div>
-
-          <GridPattern
-            numSquares={30}
-            maxOpacity={0.1}
-            duration={3}
-            className={cn(
-              'absolute !top-[-1000px] z-[1]',
-              '[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]',
-              'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12',
-            )}
-          />
-        </div>
+        <main>{children}</main>
       </body>
     </html>
   )

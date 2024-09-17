@@ -10,27 +10,16 @@
     "generate": "graphql-codegen --config codegen.ts"
   },
   "dependencies": {
-    "@apollo/client": "^3.11.4",
-    "@hookform/resolvers": "^3.9.0",
-    "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "cookies-next": "^4.2.1",
     "graphql": "^16.9.0",
     "lucide-react": "^0.435.0",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.53.0",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.23.8",
-    "zustand": "^4.5.5"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^5.0.2",
-    "@graphql-codegen/typescript": "^4.0.9",
-    "@graphql-codegen/typescript-operations": "^4.2.3",
-    "@graphql-codegen/typescript-react-apollo": "^4.3.0",
     "@mozaic/eslint-config": "workspace:*",
     "@mozaic/tsconfig": "workspace:*",
     "@mozaic/ui": "workspace:*",
