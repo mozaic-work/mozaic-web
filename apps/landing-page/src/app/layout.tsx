@@ -5,6 +5,9 @@ import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import type { ReactNode } from 'react'
 
+import { Header } from '@/components/header'
+import { cn } from '@/lib/utils'
+
 const font = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -19,8 +22,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>
-        <main>{children}</main>
+      <body
+        className={cn(
+          'bg-background relative mx-auto min-h-screen w-full scroll-smooth antialiased',
+          font.className,
+        )}
+      >
+        <main>
+          <Header />
+          {children}
+        </main>
       </body>
     </html>
   )
