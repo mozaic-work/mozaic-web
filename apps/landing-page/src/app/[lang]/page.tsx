@@ -4,20 +4,31 @@ import type { Metadata } from 'next'
 import { Fragment } from 'react'
 
 import ShimmerButton from '@/components/cta-button'
+import { Lang } from '@/utils/i18n'
+
+import { getTranslations } from '../dictionaries'
 
 export const metadata: Metadata = {
   title: 'Mozaic | AI-Driven HR for Teams Ready to Evolve',
 }
 
-export default function Home() {
+type Props = {
+  params: {
+    lang: string
+  }
+}
+
+export default async function Home({ params: { lang } }: Props) {
+  const t = await getTranslations(lang as Lang)
+
   return (
     <Fragment>
       <section id="hero">
         <div className="relative flex w-full flex-col items-center justify-start overflow-hidden px-4 pt-32 sm:px-6 sm:pt-24 md:pt-32 lg:min-h-screen lg:px-8">
           <div className="flex w-full max-w-6xl flex-col space-y-4 overflow-hidden pt-8">
             <h1 className="text-center bg-gradient-to-br from-black from-30% to-black/40 bg-clip-text py-6 text-5xl font-bold leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem]">
-              AI-Driven HR for
-              <br className="hidden md:block" /> Teams Ready to Evolve
+              {t('home.highlightedText1')}
+              <br className="hidden md:block" /> {t('home.highlightedText2')}
             </h1>
             <p className="mb-12 text-center text-lg tracking-tight text-gray-500 md:text-xl text-balance translate-y-[-1rem]">
               Automate tasks, boost productivity, and empower decision-making

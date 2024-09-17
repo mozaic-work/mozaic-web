@@ -10,10 +10,13 @@
     "generate": "graphql-codegen --config codegen.ts"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.5.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "graphql": "^16.9.0",
+    "i18n-config": "^1.1.0",
     "lucide-react": "^0.435.0",
+    "negotiator": "^0.6.3",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
@@ -24,6 +27,7 @@
     "@mozaic/eslint-config": "workspace:*",
     "@mozaic/tsconfig": "workspace:*",
     "@mozaic/ui": "workspace:*",
+    "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

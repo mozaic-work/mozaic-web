@@ -102,6 +102,9 @@ importers:
 
   apps/landing-page:
     dependencies:
+      '@formatjs/intl-localematcher':
+        specifier: ^0.5.4
+        version: 0.5.4
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -111,9 +114,15 @@ importers:
       graphql:
         specifier: ^16.9.0
         version: 16.9.0
+      i18n-config:
+        specifier: ^1.1.0
+        version: 1.1.0(@angular/common@7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1))(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(@angular/platform-browser@7.2.16(@angular/common@7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1))(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29)))(rxjs@7.8.1)
       lucide-react:
         specifier: ^0.435.0
         version: 0.435.0(react@18.3.1)
+      negotiator:
+        specifier: ^0.6.3
+        version: 0.6.3
       next:
         specifier: 14.2.5
         version: 14.2.5(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -139,6 +148,9 @@ importers:
       '@mozaic/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@types/negotiator':
+        specifier: ^0.6.3
+        version: 0.6.3
       '@types/node':
         specifier: ^20
         version: 20.16.1
@@ -263,6 +275,32 @@ packages:
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
+
+  '@angular/common@7.2.16':
+    resolution: {integrity: sha512-lPo2Vt5zmKeKTdMxHMUuViouMiK4QsmO6dGTIhJ7QAx9mov0QYb4sUVKN9Ix32Aeeznaa97qJnhevyDncJqvSA==}
+    peerDependencies:
+      '@angular/core': 7.2.16
+      rxjs: ^6.0.0
+
+  '@angular/core@7.2.16':
+    resolution: {integrity: sha512-z1RuBinuYeC4KLv8Z95YOgIQLd4nkoApdxkIZaWALwSkgeBuHJn4bCBn2cL0gJ/KO2x18TiTU5HuC+uyBt0AVQ==}
+    peerDependencies:
+      rxjs: ^6.0.0
+      zone.js: ~0.8.26
+
+  '@angular/http@7.2.16':
+    resolution: {integrity: sha512-yvjbNyzFSmmz4UTjCdy5M8mk0cZqf9TvSf8yN5UVIwtw4joyuUdlgJCuin0qSbQOKIf/JjHoofpO2JkPCGSNww==}
+    deprecated: Package no longer supported. Use @angular/common instead, see https://angular.io/guide/deprecations#angularhttp
+    peerDependencies:
+      '@angular/core': 7.2.16
+      '@angular/platform-browser': 7.2.16
+      rxjs: ^6.0.0
+
+  '@angular/platform-browser@7.2.16':
+    resolution: {integrity: sha512-6LltxoPlbtUgSec5a+BGPHZ0UYdqFizxSsplC1PoJdqH17DDxQjxcluAfXnLlvOYFSSPvYa73PSOpmUU2vp4gA==}
+    peerDependencies:
+      '@angular/common': 7.2.16
+      '@angular/core': 7.2.16
 
   '@apollo/client@3.11.4':
     resolution: {integrity: sha512-bmgYKkULpym8wt8aXlAZ1heaYo0skLJ5ru0qJ+JCRoo03Pe+yIDbBCnqlDw6Mjj76hFkDw3HwFMgZC2Hxp30Mg==}
@@ -610,6 +648,9 @@ packages:
   '@eslint/js@8.57.0':
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  '@formatjs/intl-localematcher@0.5.4':
+    resolution: {integrity: sha512-zTwEpWOzZ2CiKcB93BLngUX59hQkuZjT2+SAQEscSm52peDW/getsawMcWF1rGRpMCX6D7nSJA3CzJ8gn13N/g==}
 
   '@graphql-codegen/add@5.0.3':
     resolution: {integrity: sha512-SxXPmramkth8XtBlAHu4H4jYcYXM/o3p01+psU+0NADQowA8jtYkK6MW5rV6T+CxkEaNZItfSmZRPgIuypcqnA==}
@@ -971,6 +1012,19 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@ngx-translate/core@11.0.1':
+    resolution: {integrity: sha512-nBCa1ZD9fAUY/3eskP3Lql2fNg8OMrYIej1/5GRsfcutx9tG/5fZLCv9m6UCw1aS+u4uK/vXjv1ctG/FdMvaWg==}
+    peerDependencies:
+      '@angular/core': '>=7.0.0'
+      rxjs: '>=6.3.0'
+
+  '@ngx-translate/http-loader@4.0.0':
+    resolution: {integrity: sha512-x8LumqydWD7eX9yQTAVeoCM9gFUIGVTUjZqbxdAUavAA3qVnk9wCQux7iHLPXpydl8vyQmLoPQR+fFU+DUDOMA==}
+    peerDependencies:
+      '@angular/common': '>=7.0.0'
+      '@ngx-translate/core': '>=11.0.0'
+      rxjs: '>=6.3.0'
+
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     resolution: {integrity: sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg==}
 
@@ -1244,6 +1298,9 @@ packages:
 
   '@types/minimatch@5.1.2':
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
+
+  '@types/negotiator@0.6.3':
+    resolution: {integrity: sha512-JkXTOdKs5MF086b/pt8C3+yVp3iDUwG635L7oCH6HvJvvr6lSUU5oe/gLXnPEfYRROHjJIPgCV6cuAg8gGkntQ==}
 
   '@types/node@20.16.1':
     resolution: {integrity: sha512-zJDo7wEadFtSyNz5QITDfRcrhqDvQI1xQNQ0VoizPjM/dVAODqqIUWbJPkvsxmTI0MYRGRikcdjMPhOssnPejQ==}
@@ -2653,6 +2710,12 @@ packages:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
 
+  i18n-config@1.1.0:
+    resolution: {integrity: sha512-9VXx6KXCQVFZi16l0krDl48LmdG7Kp3wo073TPIqATj+t6T9VATX8mUny80HWVgIbfDvC1lDZ8VyjMzwoScXFQ==}
+    peerDependencies:
+      '@angular/common': ^6.0.0-rc.0 || ^6.0.0 || ^7.0.0
+      '@angular/core': ^6.0.0-rc.0 || ^6.0.0 || ^7.0.0
+
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -3151,6 +3214,10 @@ packages:
 
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+
+  negotiator@0.6.3:
+    resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
+    engines: {node: '>= 0.6'}
 
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
@@ -4297,6 +4364,9 @@ packages:
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
+  zone.js@0.8.29:
+    resolution: {integrity: sha512-mla2acNCMkWXBD+c+yeUrBUrzOxYMNFdQ6FGfigGGtEVBPJx07BQeJekjt9DmH1FtZek4E9rE1eRR9qQpxACOQ==}
+
   zustand@4.5.5:
     resolution: {integrity: sha512-+0PALYNJNgK6hldkgDq2vLrw5f6g/jCInz52n9RTpropGgeAf/ioFUCdtsjCqu4gNhW9D01rUQBROoRjdzyn2Q==}
     engines: {node: '>=12.7.0'}
@@ -4320,6 +4390,31 @@ snapshots:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
+
+  '@angular/common@7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1)':
+    dependencies:
+      '@angular/core': 7.2.16(rxjs@7.8.1)(zone.js@0.8.29)
+      rxjs: 7.8.1
+      tslib: 1.14.1
+
+  '@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29)':
+    dependencies:
+      rxjs: 7.8.1
+      tslib: 1.14.1
+      zone.js: 0.8.29
+
+  '@angular/http@7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(@angular/platform-browser@7.2.16(@angular/common@7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1))(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29)))(rxjs@7.8.1)':
+    dependencies:
+      '@angular/core': 7.2.16(rxjs@7.8.1)(zone.js@0.8.29)
+      '@angular/platform-browser': 7.2.16(@angular/common@7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1))(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))
+      rxjs: 7.8.1
+      tslib: 1.14.1
+
+  '@angular/platform-browser@7.2.16(@angular/common@7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1))(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))':
+    dependencies:
+      '@angular/common': 7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1)
+      '@angular/core': 7.2.16(rxjs@7.8.1)(zone.js@0.8.29)
+      tslib: 1.14.1
 
   '@apollo/client@3.11.4(@types/react@18.3.4)(graphql-ws@5.16.0(graphql@16.9.0))(graphql@16.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -4779,6 +4874,10 @@ snapshots:
       - supports-color
 
   '@eslint/js@8.57.0': {}
+
+  '@formatjs/intl-localematcher@0.5.4':
+    dependencies:
+      tslib: 2.6.3
 
   '@graphql-codegen/add@5.0.3(graphql@16.9.0)':
     dependencies:
@@ -5370,6 +5469,19 @@ snapshots:
   '@next/swc-win32-x64-msvc@14.2.5':
     optional: true
 
+  '@ngx-translate/core@11.0.1(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1)':
+    dependencies:
+      '@angular/core': 7.2.16(rxjs@7.8.1)(zone.js@0.8.29)
+      rxjs: 7.8.1
+      tslib: 1.14.1
+
+  '@ngx-translate/http-loader@4.0.0(@angular/common@7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1))(@ngx-translate/core@11.0.1(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1))(rxjs@7.8.1)':
+    dependencies:
+      '@angular/common': 7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1)
+      '@ngx-translate/core': 11.0.1(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1)
+      rxjs: 7.8.1
+      tslib: 1.14.1
+
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     dependencies:
       eslint-scope: 5.1.1
@@ -5634,6 +5746,8 @@ snapshots:
   '@types/json5@0.0.29': {}
 
   '@types/minimatch@5.1.2': {}
+
+  '@types/negotiator@0.6.3': {}
 
   '@types/node@20.16.1':
     dependencies:
@@ -7503,6 +7617,18 @@ snapshots:
 
   human-signals@2.1.0: {}
 
+  i18n-config@1.1.0(@angular/common@7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1))(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(@angular/platform-browser@7.2.16(@angular/common@7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1))(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29)))(rxjs@7.8.1):
+    dependencies:
+      '@angular/common': 7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1)
+      '@angular/core': 7.2.16(rxjs@7.8.1)(zone.js@0.8.29)
+      '@angular/http': 7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(@angular/platform-browser@7.2.16(@angular/common@7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1))(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29)))(rxjs@7.8.1)
+      '@ngx-translate/core': 11.0.1(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1)
+      '@ngx-translate/http-loader': 4.0.0(@angular/common@7.2.16(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1))(@ngx-translate/core@11.0.1(@angular/core@7.2.16(rxjs@7.8.1)(zone.js@0.8.29))(rxjs@7.8.1))(rxjs@7.8.1)
+      tslib: 1.14.1
+    transitivePeerDependencies:
+      - '@angular/platform-browser'
+      - rxjs
+
   iconv-lite@0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -7965,6 +8091,8 @@ snapshots:
   natural-compare-lite@1.4.0: {}
 
   natural-compare@1.4.0: {}
+
+  negotiator@0.6.3: {}
 
   neo-async@2.6.2: {}
 
@@ -9212,6 +9340,8 @@ snapshots:
   zen-observable@0.8.15: {}
 
   zod@3.23.8: {}
+
+  zone.js@0.8.29: {}
 
   zustand@4.5.5(@types/react@18.3.4)(react@18.3.1):
     dependencies:

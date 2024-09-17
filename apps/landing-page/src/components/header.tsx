@@ -146,6 +146,11 @@ export function Header() {
           </button>
         </div>
       </div>
+
+      <div className="ml-8 flex items-center">
+        <Link href="/en-US">English</Link>
+        <Link href="/pt-BR">Portuguese</Link>
+      </div>
     </header>
   )
 }
